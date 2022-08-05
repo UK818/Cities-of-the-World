@@ -13,6 +13,7 @@
 		0407804E289D08C000061BF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0407804C289D08C000061BF0 /* Main.storyboard */; };
 		04078050289D08C200061BF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0407804F289D08C200061BF0 /* Assets.xcassets */; };
 		04078053289D08C200061BF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04078051289D08C200061BF0 /* LaunchScreen.storyboard */; };
+		047E7D7D289D155800988DED /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E7D7C289D155800988DED /* RealmManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0407804F289D08C200061BF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04078052289D08C200061BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04078054289D08C200061BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		047E7D7C289D155800988DED /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,104 @@
 		04078045289D08C000061BF0 /* Cities of the World */ = {
 			isa = PBXGroup;
 			children = (
-				04078046289D08C000061BF0 /* AppDelegate.swift */,
-				04078048289D08C000061BF0 /* SceneDelegate.swift */,
-				0407804A289D08C000061BF0 /* ViewController.swift */,
-				0407804C289D08C000061BF0 /* Main.storyboard */,
-				0407804F289D08C200061BF0 /* Assets.xcassets */,
-				04078051289D08C200061BF0 /* LaunchScreen.storyboard */,
+				047E7D79289D11D200988DED /* Infrastructure */,
+				047E7D78289D11C100988DED /* Managers */,
+				047E7D75289D110A00988DED /* Domain */,
+				047E7D71289D10B100988DED /* Application */,
+				047E7D7A289D127300988DED /* Presentation */,
+				047E7D72289D10D900988DED /* Resources */,
 				04078054289D08C200061BF0 /* Info.plist */,
 			);
 			path = "Cities of the World";
+			sourceTree = "<group>";
+		};
+		047E7D71289D10B100988DED /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				04078046289D08C000061BF0 /* AppDelegate.swift */,
+				04078048289D08C000061BF0 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		047E7D72289D10D900988DED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0407804F289D08C200061BF0 /* Assets.xcassets */,
+				04078051289D08C200061BF0 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		047E7D73289D10E500988DED /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0407804A289D08C000061BF0 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		047E7D74289D10FA00988DED /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0407804C289D08C000061BF0 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		047E7D75289D110A00988DED /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				047E7D77289D114500988DED /* Entities */,
+				047E7D76289D113A00988DED /* Repository */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		047E7D76289D113A00988DED /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		047E7D77289D114500988DED /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		047E7D78289D11C100988DED /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				047E7D7C289D155800988DED /* RealmManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		047E7D79289D11D200988DED /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		047E7D7A289D127300988DED /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				047E7D7B289D12A100988DED /* View Model */,
+				047E7D73289D10E500988DED /* Controllers */,
+				047E7D74289D10FA00988DED /* Storyboards */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		047E7D7B289D12A100988DED /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0407804B289D08C000061BF0 /* ViewController.swift in Sources */,
+				047E7D7D289D155800988DED /* RealmManager.swift in Sources */,
 				04078047289D08C000061BF0 /* AppDelegate.swift in Sources */,
 				04078049289D08C000061BF0 /* SceneDelegate.swift in Sources */,
 			);
@@ -290,6 +382,7 @@
 				DEVELOPMENT_TEAM = D8333S7JX5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Cities of the World/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Cities of the world";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -318,6 +411,7 @@
 				DEVELOPMENT_TEAM = D8333S7JX5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Cities of the World/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Cities of the world";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
