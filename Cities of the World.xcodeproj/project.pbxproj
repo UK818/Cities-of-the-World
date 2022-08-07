@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		04078047289D08C000061BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078046289D08C000061BF0 /* AppDelegate.swift */; };
 		04078049289D08C000061BF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078048289D08C000061BF0 /* SceneDelegate.swift */; };
-		0407804B289D08C000061BF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407804A289D08C000061BF0 /* ViewController.swift */; };
+		0407804B289D08C000061BF0 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407804A289D08C000061BF0 /* CitiesViewController.swift */; };
 		0407804E289D08C000061BF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0407804C289D08C000061BF0 /* Main.storyboard */; };
 		04078050289D08C200061BF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0407804F289D08C200061BF0 /* Assets.xcassets */; };
 		04078053289D08C200061BF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04078051289D08C200061BF0 /* LaunchScreen.storyboard */; };
 		047E7D7D289D155800988DED /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E7D7C289D155800988DED /* RealmManager.swift */; };
+		048094D1289F9BBB00881423 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048094D0289F9BBB00881423 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04078043289D08C000061BF0 /* Cities of the World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cities of the World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04078046289D08C000061BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04078048289D08C000061BF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0407804A289D08C000061BF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0407804A289D08C000061BF0 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
 		0407804D289D08C000061BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0407804F289D08C200061BF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04078052289D08C200061BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04078054289D08C200061BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		047E7D7C289D155800988DED /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		048094D0289F9BBB00881423 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +92,7 @@
 		047E7D73289D10E500988DED /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0407804A289D08C000061BF0 /* ViewController.swift */,
+				0407804A289D08C000061BF0 /* CitiesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -137,6 +139,7 @@
 		047E7D79289D11D200988DED /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				048094CF289F9BA700881423 /* Network */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -156,6 +159,14 @@
 			children = (
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		048094CF289F9BA700881423 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				048094D0289F9BBB00881423 /* NetworkService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +240,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0407804B289D08C000061BF0 /* ViewController.swift in Sources */,
+				048094D1289F9BBB00881423 /* NetworkService.swift in Sources */,
+				0407804B289D08C000061BF0 /* CitiesViewController.swift in Sources */,
 				047E7D7D289D155800988DED /* RealmManager.swift in Sources */,
 				04078047289D08C000061BF0 /* AppDelegate.swift in Sources */,
 				04078049289D08C000061BF0 /* SceneDelegate.swift in Sources */,
