@@ -17,6 +17,7 @@
 		048094D1289F9BBB00881423 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048094D0289F9BBB00881423 /* NetworkService.swift */; };
 		048094D3289F9D7200881423 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048094D2289F9D7200881423 /* MapViewController.swift */; };
 		048094D5289F9D8C00881423 /* MapStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048094D4289F9D8C00881423 /* MapStoryboard.storyboard */; };
+		048094D8289F9F1C00881423 /* CitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048094D7289F9F1C00881423 /* CitiesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		048094D0289F9BBB00881423 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		048094D2289F9D7200881423 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		048094D4289F9D8C00881423 /* MapStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapStoryboard.storyboard; sourceTree = "<group>"; };
+		048094D7289F9F1C00881423 /* CitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			children = (
 				047E7D7B289D12A100988DED /* View Model */,
 				047E7D73289D10E500988DED /* Controllers */,
+				048094D6289F9EE300881423 /* Cells */,
 				047E7D74289D10FA00988DED /* Storyboards */,
 			);
 			path = Presentation;
@@ -173,6 +176,14 @@
 				048094D0289F9BBB00881423 /* NetworkService.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		048094D6289F9EE300881423 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				048094D7289F9F1C00881423 /* CitiesTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +264,7 @@
 				047E7D7D289D155800988DED /* RealmManager.swift in Sources */,
 				04078047289D08C000061BF0 /* AppDelegate.swift in Sources */,
 				04078049289D08C000061BF0 /* SceneDelegate.swift in Sources */,
+				048094D8289F9F1C00881423 /* CitiesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
