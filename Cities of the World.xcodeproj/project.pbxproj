@@ -15,6 +15,8 @@
 		04078053289D08C200061BF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04078051289D08C200061BF0 /* LaunchScreen.storyboard */; };
 		047E7D7D289D155800988DED /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E7D7C289D155800988DED /* RealmManager.swift */; };
 		048094D1289F9BBB00881423 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048094D0289F9BBB00881423 /* NetworkService.swift */; };
+		048094D3289F9D7200881423 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048094D2289F9D7200881423 /* MapViewController.swift */; };
+		048094D5289F9D8C00881423 /* MapStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048094D4289F9D8C00881423 /* MapStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		04078054289D08C200061BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		047E7D7C289D155800988DED /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		048094D0289F9BBB00881423 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		048094D2289F9D7200881423 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		048094D4289F9D8C00881423 /* MapStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				0407804A289D08C000061BF0 /* CitiesViewController.swift */,
+				048094D2289F9D7200881423 /* MapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				0407804C289D08C000061BF0 /* Main.storyboard */,
+				048094D4289F9D8C00881423 /* MapStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -229,6 +235,7 @@
 			files = (
 				04078053289D08C200061BF0 /* LaunchScreen.storyboard in Resources */,
 				04078050289D08C200061BF0 /* Assets.xcassets in Resources */,
+				048094D5289F9D8C00881423 /* MapStoryboard.storyboard in Resources */,
 				0407804E289D08C000061BF0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				048094D1289F9BBB00881423 /* NetworkService.swift in Sources */,
+				048094D3289F9D7200881423 /* MapViewController.swift in Sources */,
 				0407804B289D08C000061BF0 /* CitiesViewController.swift in Sources */,
 				047E7D7D289D155800988DED /* RealmManager.swift in Sources */,
 				04078047289D08C000061BF0 /* AppDelegate.swift in Sources */,
