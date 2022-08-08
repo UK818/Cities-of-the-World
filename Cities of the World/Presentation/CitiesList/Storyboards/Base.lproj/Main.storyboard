@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SqY-XY-Fnq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,7 +8,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Cities View Controller-->
+        <!--Cities of the World-->
+        <scene sceneID="wji-CL-klq">
+            <objects>
+                <navigationController title="Cities of the World" id="SqY-XY-Fnq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pod-Rw-F1L">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dXz-NW-T4S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CCo-4x-lTj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1584" y="116"/>
+        </scene>
+        <!--Cities of the World-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CitiesViewController" customModule="Cities_of_the_World" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,14 +33,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ihk-PI-wRb">
-                                <rect key="frame" x="17" y="54" width="380" height="50"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="NDU-mT-Lru"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cyc-Pl-HWX">
-                                <rect key="frame" x="0.0" y="114" width="414" height="782"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cyc-Pl-HWX">
+                                <rect key="frame" x="0.0" y="158" width="414" height="738"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -34,17 +50,22 @@
                             <constraint firstItem="cyc-Pl-HWX" firstAttribute="top" secondItem="ihk-PI-wRb" secondAttribute="bottom" constant="10" id="DUN-PJ-uky"/>
                             <constraint firstItem="cyc-Pl-HWX" firstAttribute="top" secondItem="ihk-PI-wRb" secondAttribute="bottom" constant="10" id="QUg-Vl-nhi"/>
                             <constraint firstItem="ihk-PI-wRb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Rsv-VW-gud"/>
-                            <constraint firstItem="ihk-PI-wRb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-17" id="daK-w0-Onm"/>
+                            <constraint firstItem="ihk-PI-wRb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="daK-w0-Onm"/>
                             <constraint firstAttribute="bottom" secondItem="cyc-Pl-HWX" secondAttribute="bottom" id="f2r-2k-VxC"/>
-                            <constraint firstItem="ihk-PI-wRb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="jBb-bx-zvl"/>
+                            <constraint firstItem="ihk-PI-wRb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jBb-bx-zvl"/>
                             <constraint firstItem="cyc-Pl-HWX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qLz-hg-R9V"/>
                             <constraint firstItem="cyc-Pl-HWX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rEn-tP-yv7"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Cities of the World" leftItemsSupplementBackButton="YES" id="ZnV-Yg-FTH"/>
+                    <connections>
+                        <outlet property="citiesTableView" destination="cyc-Pl-HWX" id="SGt-3d-ObX"/>
+                        <outlet property="citySearchBar" destination="ihk-PI-wRb" id="7vZ-0G-uMh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+            <point key="canvasLocation" x="-454" y="116"/>
         </scene>
     </scenes>
     <resources>

@@ -22,6 +22,10 @@
 		048094E0289FABD800881423 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048094DF289FABD800881423 /* ViewModel.swift */; };
 		048094E2289FB0E600881423 /* CityAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048094E1289FB0E600881423 /* CityAPIResponse.swift */; };
 		048094E5289FB36100881423 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048094E4289FB36100881423 /* UIView+Extension.swift */; };
+		048094E7289FC99F00881423 /* NetworkServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048094E6289FC99F00881423 /* NetworkServiceConstants.swift */; };
+		048094E9289FD3FA00881423 /* NetworkServicePayloads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048094E8289FD3FA00881423 /* NetworkServicePayloads.swift */; };
+		048094EB289FE2A700881423 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048094EA289FE2A700881423 /* Repository.swift */; };
+		048094F128A0F31000881423 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048094F028A0F31000881423 /* UIViewController+Extension.swift */; };
 		9A9C6D9241B738E54DA0D4D0 /* Pods_Cities_of_the_World.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC759C44CB2DD0FA0A5F22FF /* Pods_Cities_of_the_World.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +47,10 @@
 		048094DF289FABD800881423 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		048094E1289FB0E600881423 /* CityAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityAPIResponse.swift; sourceTree = "<group>"; };
 		048094E4289FB36100881423 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		048094E6289FC99F00881423 /* NetworkServiceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceConstants.swift; sourceTree = "<group>"; };
+		048094E8289FD3FA00881423 /* NetworkServicePayloads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServicePayloads.swift; sourceTree = "<group>"; };
+		048094EA289FE2A700881423 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		048094F028A0F31000881423 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		3EBF62C8D2E3B6DA54F7558F /* Pods-Cities of the World.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cities of the World.debug.xcconfig"; path = "Target Support Files/Pods-Cities of the World/Pods-Cities of the World.debug.xcconfig"; sourceTree = "<group>"; };
 		D776050BAFFFDEDEC8A00A4F /* Pods-Cities of the World.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cities of the World.release.xcconfig"; path = "Target Support Files/Pods-Cities of the World/Pods-Cities of the World.release.xcconfig"; sourceTree = "<group>"; };
 		EC759C44CB2DD0FA0A5F22FF /* Pods_Cities_of_the_World.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cities_of_the_World.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +148,7 @@
 		047E7D76289D113A00988DED /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				048094EA289FE2A700881423 /* Repository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -190,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				048094D0289F9BBB00881423 /* NetworkService.swift */,
+				048094E6289FC99F00881423 /* NetworkServiceConstants.swift */,
+				048094E8289FD3FA00881423 /* NetworkServicePayloads.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -241,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				048094E4289FB36100881423 /* UIView+Extension.swift */,
+				048094F028A0F31000881423 /* UIViewController+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -382,13 +394,17 @@
 				048094D1289F9BBB00881423 /* NetworkService.swift in Sources */,
 				048094D3289F9D7200881423 /* MapViewController.swift in Sources */,
 				0407804B289D08C000061BF0 /* CitiesViewController.swift in Sources */,
+				048094E7289FC99F00881423 /* NetworkServiceConstants.swift in Sources */,
+				048094F128A0F31000881423 /* UIViewController+Extension.swift in Sources */,
 				047E7D7D289D155800988DED /* RealmManager.swift in Sources */,
 				04078047289D08C000061BF0 /* AppDelegate.swift in Sources */,
 				04078049289D08C000061BF0 /* SceneDelegate.swift in Sources */,
 				048094E2289FB0E600881423 /* CityAPIResponse.swift in Sources */,
 				048094E0289FABD800881423 /* ViewModel.swift in Sources */,
+				048094EB289FE2A700881423 /* Repository.swift in Sources */,
 				048094E5289FB36100881423 /* UIView+Extension.swift in Sources */,
 				048094D8289F9F1C00881423 /* CitiesTableViewCell.swift in Sources */,
+				048094E9289FD3FA00881423 /* NetworkServicePayloads.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

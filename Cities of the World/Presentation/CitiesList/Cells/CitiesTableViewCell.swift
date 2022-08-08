@@ -11,7 +11,9 @@ class CitiesTableViewCell: UITableViewCell {
 	
 	static let identifier = "CitiesTableViewCell"
 	
-	
+	@IBOutlet weak var containerView: UIView!
+	@IBOutlet weak var cityName: UILabel!
+	@IBOutlet weak var cityLocalName: UILabel!
 	
 	static func toNib() -> UINib {
 		UINib(nibName: identifier, bundle: nil)
@@ -19,11 +21,12 @@ class CitiesTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+		containerView.addDropShadow()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
+	
+	func populateCell(with data: City) {
+		cityName.text = data.name
+		cityLocalName.text = data.localName
+	}
 
 }
