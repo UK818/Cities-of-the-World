@@ -24,7 +24,7 @@ class CitiesTableViewCell: UITableViewCell {
 		containerView.addDropShadow()
     }
 	
-	func populateCell(with data: City) {
+	func populateCell(with data: CityModel) {
 		cityName.text = data.name
 		cityLocalName.text = data.localName
 	}

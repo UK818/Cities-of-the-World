@@ -9,5 +9,5 @@ target 'Cities of the World' do
     pod 'RxSwift', '6.5.0'
     pod 'RxCocoa', '6.5.0'
     pod 'AlamofireImage', '~> 4.1'
-    pod 'Realm', '~> 10.28'
+    pod 'RealmSwift'
 end

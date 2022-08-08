@@ -20,8 +20,7 @@ class ViewModel {
 	}
 	
 	func fetchCities(page: Int) {
-		let payload = NetworkServicePayload.sharedInstance.fetchCitiesPayload(page: "\(page)")
-		repository.fetchCitiesData(payload: payload) { [weak self] result in
+		repository.fetchCitiesData(page: page) { [weak self] result in
 			guard let self = self else { return }
 			switch result {
 			case .success(let res):
@@ -33,8 +32,7 @@ class ViewModel {
 	}
 	
 	func filterCities(cityName: String, page: Int) {
-		let payload = NetworkServicePayload.sharedInstance.filterCitiesPayload(name: cityName, page: "\(page)")
-		repository.fetchCitiesData(payload: payload) { [weak self] result in
+		repository.filterCity(page: page, cityName: cityName) { [weak self] result in
 			guard let self = self else { return }
 			switch result {
 			case .success(let res):

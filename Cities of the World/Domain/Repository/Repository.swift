@@ -15,12 +15,14 @@ class Repository {
 		self.remoteDataSource = remoteDataSource
 	}
 	
-	func fetchCitiesData(payload: [String: Any], completion: @escaping (Result<CityAPIResponse, ErrorModel>) -> Void) {
-		remoteDataSource.fetch(method: .get, type: CityAPIResponse.self, payload: nil, completionHandler: completion)
+	func fetchCitiesData(page: Int, completion: @escaping (Result<CityAPIResponse, ErrorModel>) -> Void) {
+		let urlString = "?page=\(page)"
+		remoteDataSource.fetch(relativeUrl: urlString, method: .get, type: CityAPIResponse.self, payload: nil, completionHandler: completion)
 	}
 	
-	func filterCity(payload: [String: Any], completion: @escaping (Result<CityAPIResponse, ErrorModel>) -> Void) {
-		remoteDataSource.fetch(method: .get, type: CityAPIResponse.self, payload: payload, completionHandler: completion)
+	func filterCity(page: Int, cityName: String, completion: @escaping (Result<CityAPIResponse, ErrorModel>) -> Void) {
+		let urlString = "?filter[0][name][contains]=\(cityName)&page=\(page)&include=country"
+		remoteDataSource.fetch(relativeUrl: urlString, method: .get, type: CityAPIResponse.self, payload: nil, completionHandler: completion)
 	}
 	
 }

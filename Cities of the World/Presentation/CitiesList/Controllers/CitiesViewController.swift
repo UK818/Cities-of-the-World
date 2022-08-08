@@ -16,7 +16,7 @@ class CitiesViewController: UIViewController {
 	private let disposeBag = DisposeBag()
 	
 	var viewModel: ViewModel?
-	var cities: [City]? = [City]()
+	var cities: [CityModel]? = [CityModel]()
 	var cordinates: [[Double]]? = [[Double]]()
 	var cityNames: [String]? = [String]()
 	
@@ -34,22 +34,30 @@ class CitiesViewController: UIViewController {
 	func setupObservers() {
 		viewModel?.cities.subscribe { [weak self] res in
 			guard let self = self else { return }
+			
 			if let data = res.element?.data {
 				print(data.items)
 				DispatchQueue.main.async {
+					self.cities?.removeAll()
+					self.cordinates?.removeAll()
+					self.cityNames?.removeAll()
+					
 					for item in data.items {
-						if let latitude = item.latitude, let longitude = item.longitude, let cityName = item.name {
+						if let id = item.id, let latitude = item.latitude, let longitude = item.longitude, let cityName = item.name, let localName = item.localName {
 							let cordinate: [Double] = [latitude, longitude]
+							let city = CityModel(id: id, name: cityName, localName: localName, latitude: latitude, longitude: longitude)
+							self.cities?.append(city)
 							self.cordinates?.append(cordinate)
 							self.cityNames?.append(cityName)
 						}
 					}
+					
 					if let totalPages = data.pagination.total, let currentPage = data.pagination.currentPage {
 						self.total = totalPages
 						self.currentPage = currentPage
 					}
+					
 					self.isLoading = false
-					self.cities = data.items
 					self.citiesTableView.reloadData()
 					self.citiesTableView.layoutIfNeeded()
 				}
@@ -60,7 +68,6 @@ class CitiesViewController: UIViewController {
 	func setupView() {
 		let repository: Repository = Repository(remoteDataSource: NetworkService())
 		viewModel = ViewModel(repository: repository)
-//		dismissKeyboardOnTap()
 		citySearchBar.delegate = self
 		viewModel?.fetchCities(page: 1)
 	}
@@ -129,7 +136,7 @@ extension CitiesViewController: UIScrollViewDelegate {
 				isLoading = true
 			}
 		}
-
+		
 		if position < 10 {
 			if currentPage > 1 {
 				if !isLoading {

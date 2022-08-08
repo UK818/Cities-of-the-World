@@ -26,6 +26,7 @@
 		048094E9289FD3FA00881423 /* NetworkServicePayloads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048094E8289FD3FA00881423 /* NetworkServicePayloads.swift */; };
 		048094EB289FE2A700881423 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048094EA289FE2A700881423 /* Repository.swift */; };
 		048094F128A0F31000881423 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048094F028A0F31000881423 /* UIViewController+Extension.swift */; };
+		048094F328A15A6B00881423 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048094F228A15A6B00881423 /* City.swift */; };
 		9A9C6D9241B738E54DA0D4D0 /* Pods_Cities_of_the_World.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC759C44CB2DD0FA0A5F22FF /* Pods_Cities_of_the_World.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		048094E8289FD3FA00881423 /* NetworkServicePayloads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServicePayloads.swift; sourceTree = "<group>"; };
 		048094EA289FE2A700881423 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		048094F028A0F31000881423 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		048094F228A15A6B00881423 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		3EBF62C8D2E3B6DA54F7558F /* Pods-Cities of the World.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cities of the World.debug.xcconfig"; path = "Target Support Files/Pods-Cities of the World/Pods-Cities of the World.debug.xcconfig"; sourceTree = "<group>"; };
 		D776050BAFFFDEDEC8A00A4F /* Pods-Cities of the World.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cities of the World.release.xcconfig"; path = "Target Support Files/Pods-Cities of the World/Pods-Cities of the World.release.xcconfig"; sourceTree = "<group>"; };
 		EC759C44CB2DD0FA0A5F22FF /* Pods_Cities_of_the_World.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cities_of_the_World.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				048094E1289FB0E600881423 /* CityAPIResponse.swift */,
+				048094F228A15A6B00881423 /* City.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				048094E2289FB0E600881423 /* CityAPIResponse.swift in Sources */,
 				048094E0289FABD800881423 /* ViewModel.swift in Sources */,
 				048094EB289FE2A700881423 /* Repository.swift in Sources */,
+				048094F328A15A6B00881423 /* City.swift in Sources */,
 				048094E5289FB36100881423 /* UIView+Extension.swift in Sources */,
 				048094D8289F9F1C00881423 /* CitiesTableViewCell.swift in Sources */,
 				048094E9289FD3FA00881423 /* NetworkServicePayloads.swift in Sources */,

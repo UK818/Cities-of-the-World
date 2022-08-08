@@ -10,17 +10,17 @@ import Alamofire
 
 
 protocol RemoteDataSource {
-	func fetch<T>(method: HTTPMethod, type: T.Type, payload: [String: Any]?, completionHandler completion: @escaping (Result<T, ErrorModel>) -> Void) where T : Decodable, T : Encodable
+	func fetch<T>(relativeUrl urlString: String, method: HTTPMethod, type: T.Type, payload: [String: Any]?, completionHandler completion: @escaping (Result<T, ErrorModel>) -> Void) where T : Decodable, T : Encodable
 }
 
 class NetworkService: RemoteDataSource {
 	
-	func fetch<T>(method: HTTPMethod, type: T.Type, payload: [String: Any]? = [:], completionHandler completion: @escaping (Result<T, ErrorModel>) -> Void) where T : Decodable, T : Encodable {
+	func fetch<T>(relativeUrl urlString: String, method: HTTPMethod, type: T.Type, payload: [String: Any]? = [:], completionHandler completion: @escaping (Result<T, ErrorModel>) -> Void) where T : Decodable, T : Encodable {
 
-		guard let url = URL(string: NetworkServiceConstants.BASE_URL) else {
+		guard let url = URL(string: NetworkServiceConstants.BASE_URL + urlString) else {
 			return
 		}
-		debugPrint("full url is \(NetworkServiceConstants.BASE_URL)")
+		debugPrint("full url is \(NetworkServiceConstants.BASE_URL + urlString)")
 
 		var makeRequest = URLRequest(url: url)
 		makeRequest.httpMethod = method.rawValue
